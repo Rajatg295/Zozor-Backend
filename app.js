@@ -121,7 +121,7 @@ mongoose.connect(MONGODB).then(() => {
     console.error('Error connecting to MongoDB:', err.message);
 });
 
-app.use('/products',productRoutes);
+app.use('/products',productRoutes); 
 app.use('/address', addressRoutes);
 
 

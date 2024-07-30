@@ -21,6 +21,8 @@ export const addProduct = async (req, res) => {
     originalPrice: req.body.originalPrice,
     discountPercentage: req.body.discountPercentage,
     quantity: req.body.quantity,
+    category:req.body.category,
+    stock:req.body.stock
   });
 
   try {

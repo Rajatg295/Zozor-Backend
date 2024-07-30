@@ -13,6 +13,8 @@ const products = [
     originalPrice: 1200,
     discountPercentage: 20,
     quantity: 1,
+    category: 'Mobile Tool Kits', 
+    stock: 50
   },
   {
     name: 'Product 2',
@@ -25,6 +27,8 @@ const products = [
     originalPrice: 1800,
     discountPercentage: 15,
     quantity: 1,
+    category: 'Mobile Display Screens', // Added category
+    stock: 30 // Added stock
   },
   {
     name: 'Product 3',
@@ -37,6 +41,8 @@ const products = [
     originalPrice: 2200,
     discountPercentage: 10,
     quantity: 1,
+    category: 'Mobile Spare Parts', // Added category
+    stock: 20 // Added stock
   },
   {
     name: 'Product 4',
@@ -49,6 +55,8 @@ const products = [
     originalPrice: 2800,
     discountPercentage: 25,
     quantity: 1,
+    category: 'Accessories', // Added category
+    stock: 10 // Added stock
   },
   {
     name: 'Product 5',
@@ -61,6 +69,8 @@ const products = [
     originalPrice: 3500,
     discountPercentage: 30,
     quantity: 1,
+    category: 'Accessories', // Added category
+    stock: 5 // Added stock
   },
 ];
 
