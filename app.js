@@ -93,7 +93,7 @@ import productRoutes from './routes/productRoutes.js';
 import addressRoutes from './routes/addressRoutes.js';
 
 
-// dotenv.config();
+dotenv.config();
 
 const app = express();
 const PORT = 8080;
