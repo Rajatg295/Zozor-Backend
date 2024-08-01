@@ -91,6 +91,7 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import productRoutes from './routes/productRoutes.js'; 
 import addressRoutes from './routes/addressRoutes.js';
+import reviewRoutes from './routes/reviewRoutes.js';
 
 
 dotenv.config();
@@ -123,7 +124,7 @@ mongoose.connect(MONGODB).then(() => {
 
 app.use('/products',productRoutes); 
 app.use('/address', addressRoutes);
-
+app.use('/api/reviews', reviewRoutes);
 
 
 app.listen(PORT, () => {
