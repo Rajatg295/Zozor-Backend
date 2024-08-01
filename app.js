@@ -92,7 +92,7 @@ import bodyParser from "body-parser";
 import productRoutes from './routes/productRoutes.js'; 
 import addressRoutes from './routes/addressRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
-
+import reviewRoutes2 from './routes/reviewRoutes2.js'; 
 
 dotenv.config();
 
@@ -125,7 +125,7 @@ mongoose.connect(MONGODB).then(() => {
 app.use('/products',productRoutes); 
 app.use('/address', addressRoutes);
 app.use('/api/reviews', reviewRoutes);
-
+app.use('/api/reviews', reviewRoutes2);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
