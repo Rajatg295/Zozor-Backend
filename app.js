@@ -93,6 +93,7 @@ import productRoutes from './routes/productRoutes.js';
 import addressRoutes from './routes/addressRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import reviewRoutes2 from './routes/reviewRoutes2.js'; 
+import orderRoutes from './routes/orders.js';
 
 dotenv.config();
 
@@ -114,7 +115,8 @@ const MONGODB = "mongodb+srv://goel85749:Sidhu295@zozor.suk46dn.mongodb.net/prod
 
 app.use(cors());
   app.use(express.json());
-
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(MONGODB).then(() => {
     console.log('Connected to MongoDB');
@@ -126,6 +128,7 @@ app.use('/products',productRoutes);
 app.use('/address', addressRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/reviews', reviewRoutes2);
+app.use('/api', orderRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

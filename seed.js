@@ -27,8 +27,8 @@ const products = [
     originalPrice: 1800,
     discountPercentage: 15,
     quantity: 1,
-    category: 'Mobile Display Screens', // Added category
-    stock: 30 // Added stock
+    category: 'Mobile Display Screens', 
+    stock: 30 
   },
   {
     name: 'Product 3',
