@@ -1,17 +1,19 @@
 import express from 'express';
 import multer from 'multer';
 import Order from '../models/Order.js';
+import path from 'path';  // Ensure you import path for file handling
 
 const router = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+    cb(null, 'uploads/'); // Directory to save uploaded files
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname);
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
   },
 });
+
 const upload = multer({ storage });
 
 router.post('/orders', upload.array('images[]'), async (req, res) => {
@@ -21,10 +23,10 @@ router.post('/orders', upload.array('images[]'), async (req, res) => {
     const { products, addresses, discount, total, coupon, paymentMethod } = req.body;
 
     if (!products || !addresses) {
-        throw new Error('Products or addresses data is missing');
-      }
+      throw new Error('Products or addresses data is missing');
+    }
       
-    const productsArray = JSON.parse(products);
+    const productsArray = JSON.parse(products); 
     const addressesArray = JSON.parse(addresses);
 
     const order = new Order({
@@ -34,7 +36,7 @@ router.post('/orders', upload.array('images[]'), async (req, res) => {
       total: Number(total),
       coupon,
       paymentMethod,
-      images: req.files.map(file => file.path)
+      images: req.files.map(file => file.path) // Save the paths to the images
     });
 
     await order.save();

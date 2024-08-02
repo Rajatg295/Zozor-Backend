@@ -18,7 +18,7 @@ const OrderSchema = new mongoose.Schema({
       stock: { type: Number },
     }
   ],
-  addresses: [
+  addresses: [ 
     {
       _id: { type: String },
       name: { type: String, required: true },
