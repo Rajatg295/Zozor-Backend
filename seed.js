@@ -41,8 +41,8 @@ const products = [
     originalPrice: 2200,
     discountPercentage: 10,
     quantity: 1,
-    category: 'Mobile Spare Parts', // Added category
-    stock: 20 // Added stock
+    category: 'Mobile Spare Parts', 
+    stock: 20 
   },
   {
     name: 'Product 4',
@@ -55,8 +55,8 @@ const products = [
     originalPrice: 2800,
     discountPercentage: 25,
     quantity: 1,
-    category: 'Accessories', // Added category
-    stock: 10 // Added stock
+    category: 'Accessories', 
+    stock: 10 
   },
   {
     name: 'Product 5',
@@ -69,8 +69,8 @@ const products = [
     originalPrice: 3500,
     discountPercentage: 30,
     quantity: 1,
-    category: 'Accessories', // Added category
-    stock: 5 // Added stock
+    category: 'Accessories', 
+    stock: 5 
   },
 ];
 
