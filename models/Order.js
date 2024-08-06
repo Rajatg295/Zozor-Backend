@@ -22,6 +22,7 @@ const OrderSchema = new mongoose.Schema({
     {
       _id: { type: String },
       name: { type: String, required: true },
+      email:{type:String,required:true},
       room: { type: String },
       address: { type: String, required: true },
       city: { type: String, required: true },
@@ -35,7 +36,7 @@ const OrderSchema = new mongoose.Schema({
   total: { type: Number, required: true },
   coupon: { type: String },
   paymentMethod: { type: String, required: true },
-  images: [String], // Array of image file paths
+  images: [String],
   createdAt: { type: Date, default: Date.now }
 });
 

@@ -2,7 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import Order from '../models/Order.js';
 import path from 'path';  
-import mongoose from 'mongoose';  // Ensure mongoose is imported
+import mongoose from 'mongoose'; 
 
 const router = express.Router();
 
